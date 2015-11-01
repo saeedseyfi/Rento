@@ -1,0 +1,240 @@
+﻿doctype html
+html(lang="en")
+	head
+		meta(charset='utf-8')
+		meta(http-equiv="X-UA-Compatible",content="IE=edge")
+		meta(name="viewport",content="width=device-width, initial-scale=1")
+		link(href='/favicon.ico', rel='shortcut icon', type='image/x-icon')
+		link(href='/favicon.ico', rel='icon', type='image/x-icon')
+		link(href="assets/css/bootstrap.min.css",rel="stylesheet")
+		link(href="assets/css/front-end-test-icons.min.css",rel="stylesheet")
+		link(href="assets/css/style.min.css",rel="stylesheet")
+		link(href="assets/css/rent.min.css",rel="stylesheet")
+		title Elite & Luxurious, 'The Reserve' Villa at 'Al Barari'
+		<!--[if lt IE 9]>
+		script(type='text/javascript',src='assets/js/html5shiv.js')
+		script(type='text/javascript') html5.shivDocument(document)
+		<![endif]-->
+	- var isInRentPage = true
+	body(class=isInRentPage ? 'rent' : '')
+		header#mainHeader
+			nav.navbar.navbar-default
+				div.container
+					div.navbar-header
+						button(type="button" , class="navbar-toggle collapsed" , data-toggle="collapse" , data-target="#navbar-collapse" , aria-expanded="false")
+							span.sr-only Toggle navigation
+							span.icon-bar
+							span.icon-bar
+							span.icon-bar
+						a.navbar-brand(href="#")
+							img(src='assets/img/logo.png',alt="House renting")
+							span House renting
+					#navbar-collapse.collapse.navbar-collapse
+						ul.nav.navbar-nav.navbar-right
+							li.active
+								a(href="#") Buy
+							li.info
+								a(href="#") Rent
+							li.success
+								a(href="#") Commercial
+							li
+								a(href="#") Prestige
+							li
+								a(href="#") Brokers
+							li
+								a(href="#") Blog
+		#mainContainer.container(itemscope,itemtype="https://schema.org/RentAction")
+			.row
+				.col-md-8.left-side
+					section.house-overview.top.shadow-box.clearfix
+						h3.sr-only House info
+						ul
+							li.icon-pin Appartment
+							li.icon-pin 3 beds
+							li.icon-pin 2 bathes
+							li.icon-pin 1.350 sqft
+						span.price.icon-bookmark(itemprop="price")
+							span.amount 250,000
+							span.unit AED/year
+					section.house-carousel.shadow-box
+						h3.sr-only House images
+						#house-carousel.carousel.slide(data-ride="carousel")
+							- var slides = [1, 2, 3, 4, 5, 6, 7]
+							.carousel-inner(role="listbox")
+								each val in slides
+									.item(class= val == 1 ? 'active' : '')
+										img(src="assets/img/wide.jpg" , alt="The Reserve image #{val}",itemprop="image")
+							ol.carousel-indicators
+								each val in slides
+									li(data-target="#house-carousel" , data-slide-to="#{val - 1}" class= val == 1 ? 'active' : '', style="background-image: url('assets/img/#{val}.jpg')")
+										img.sr-only(src="assets/img/#{val}.jpg" , alt="The Reserve image #{val} - Thumbnail")
+					section.house-details
+						h3.sr-only Details
+						.house-details-head.clearfix
+							h5.house-details-title Property description
+							span.ref
+								span Ref:
+								span.amount F4-R-163
+						article.shadow-box
+							header.clearfix
+								address(itemprop="location") Dubai - Al Barari - Al Barari Villas
+								h1(itemprop="name") Elite & Luxurious, ‘The Reserve’ Villa at ‘Al Barari’
+							.desc(itemprop="description")
+								p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+								p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+								p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+								p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.
+							h5.house-listing-title Listing summary
+							ul.house-listing-summary.clearfix
+								li
+									dl
+										dt Refrence
+										dd TRA01
+								li
+									dl
+										dt Type
+										dd Villa
+								li
+									dl
+										dt City
+										dd Dubai
+								li
+									dl
+										dt Community
+										dd Al Barari
+								li
+									dl
+										dt Subcoummunity
+										dd Al Barari Villas
+								li
+									dl
+										dt Property
+										dd N/A
+								li
+									dl
+										dt Sqft
+										dd 50,000 sqft
+								li
+									dl
+										dt Bedrooms
+										dd 7+
+								li
+									dl
+										dt Bathrooms
+										dd 7+
+								li
+									dl
+										dt Price
+										dd AED 70,000,000
+								li
+									dl
+										dt Price/sqft
+										dd AED 1,400 /sqft
+								li
+									dl
+										dt Last Update
+										dd 05/08/2013
+				aside.col-md-4.right-side
+					section#senderDetails.side-box.shadow-box.clearfix
+						h3.sr-only Agent details
+						div
+							figure.avatar
+								img(src="assets/img/fig.jpg", alt="Jennifer Doe")
+							.details
+								h3.name(itemprop="agent") Jennifer Doe
+								p.more-details
+									span The Reserve Agency LLC
+									span Emaar Square
+									span Downtown, Dubai, UAI
+								figure.logo
+									img(src="assets/img/aff.jpg", alt="Land Sterling")
+					section#contact.side-box.shadow-box.clearfix
+						h3.sr-only Contact
+						#contactAccordion.panel-group(role='tablist', aria-multiselectable='true')
+							.panel.panel-default
+								#contactByPhone.panel-heading(role='tab')
+									h4.panel-title
+										a.icon-grid.collapsed(role='button', data-toggle='collapse', data-parent='#contactAccordion', href='#collapseContactByPhone', aria-expanded='true', aria-controls='collapseContactByPhone') Contact by phone
+								#collapseContactByPhone.panel-collapse.collapse(role='tabpanel', aria-labelledby='contactByPhone')
+									.panel-body 055 123 45 67
+							.panel.panel-default
+								#contactByEmail.panel-heading(role='tab')
+									h4.panel-title
+										a.icon-email.collapsed(role='button', data-toggle='collapse', data-parent='#contactAccordion', href='#collapceContactByEmail', aria-expanded='false', aria-controls='collapceContactByEmail') Contact by email
+								#collapceContactByEmail.panel-collapse.collapse(role='tabpanel', aria-labelledby='contactByEmail')
+									.panel-body.form
+										form
+											textarea.form-control(rows="3", placeholder="Type your message to the agent")
+											input.form-control(type="text", placeholder="Full name")
+											input.form-control(type="email", placeholder="Email address")
+											input.form-control(type="tel", placeholder="Phone")
+											button.btn.btn-primary(type="submit") Send
+							.panel.panel-default
+								#makeAnOffer.panel-heading(role='tab')
+									h4.panel-title
+										a.icon-edit-write.collapsed(role='button', data-toggle='collapse', data-parent='#contactAccordion', href='#collapceMakeAnOffer', aria-expanded='false', aria-controls='collapceMakeAnOffer') Make an offer
+								#collapceMakeAnOffer.panel-collapse.collapse(role='tabpanel', aria-labelledby='makeAnOffer')
+									.panel-body.form
+										form
+											.form-group
+												label.control-label(for='makeAnOfferAmount') Your offer
+												.input-group
+													input#makeAnOfferAmount.form-control(type='text')
+													span.input-group-addon AED/year
+												span.note.small only serious and reasonable offers will be considered by the broker
+											input.form-control(type="text", placeholder="Full name")
+											input.form-control(type="email", placeholder="Email address")
+											input.form-control(type="tel", placeholder="Phone")
+											button.btn.btn-primary(type="submit") Send
+					section#ad.side-box.clearfix.hidden-xs.hidden-sm
+						h6.text-uppercase Advertisements
+						.shadow-box
+							figure
+								img(src="assets/img/ad.jpg", alt="MPU")
+					section#actions.side-box.shadow-box.clearfix
+						h3.sr-only Actions
+						h4.panel-title
+							a.icon-bookmark-star-favorite(href="#") Favorite this property
+						h4.panel-title
+							a.icon-file(href="#") Print details in PDF
+						h4.panel-title
+							a.icon-user(href="#") Email to a friend
+						h4.panel-title
+							a.icon-facebook(href="#") Share on facebook
+					section#liveMarket.side-box.clearfix
+						h6.text-uppercase.icon-chart-bars Market price 
+							strong Live
+						.shadow-box.clearfix
+							dl
+								dt Price based on
+								dd 60 similar listings
+								dt Average price
+								dd AED/year 177,583
+								dt Average sqft
+								dd 1,993 Sqft
+								dt Average price/sqft
+								dd AED/year 92 per sqft
+							a.pull-right.btn.btn-primary Read more
+			#related.clearfix
+				h3.icon-briefcase-case People also checked these properties out
+				ul.clearfix
+					each val in [1,2,3,4,5]
+						li
+							a.shadow-box(href="#")
+								figure.image(style="background-image: url(assets/img/#{val}.jpg)")
+									img.sr-only(src="assets/img/#{val}.jpg", alt="Dubai Sports City")
+								h4.name Dubai Sports City
+								.price.icon-bookmark
+									span.amount 58,000
+									span.unit AED/year
+			section.house-overview.bottom.shadow-box.clearfix
+				h3.sr-only House info
+				ul
+					li.icon-pin Appartment
+					li.icon-pin 3 beds
+					li.icon-pin 2 bathes
+					li.icon-pin 1.350 sqft
+				span.price.icon-bookmark
+					span.amount 250,000
+					span.unit AED/year
+		script(type='text/javascript',src='assets/js/script.min.js')

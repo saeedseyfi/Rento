@@ -1,0 +1,8 @@
+- The candidate needs to code the page showed in "mockup.jpg". Details are provided in "briefing.jpg".
+- Show HTML5, CSS3 and JS skills.
+- Responsive design.
+- The text doesn't matter, just use some Lorem ipsum.
+- Up to the candidate to decide if he wants to use CSS, JS or both for some features (buttons, pictures, responsiveness, etc...).
+- Original pictures to use are attached, the candidate is not allowed to modify them other than using CSS or JS.
+- We only consider people that will browse this page with a recent computer (2 years old at max).
+- The candidate can extract icons with the background from the jpeg file since we do not provide icons with transparency. Just code it as if the icons were transparent.

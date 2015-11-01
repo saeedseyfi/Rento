@@ -1,0 +1,592 @@
+@import 'variables';
+
+/* House overview styles */
+	.house-overview {
+		margin-bottom: 15px;
+		padding: 17px;
+
+		&.bottom{
+			margin: 15px 0;
+		}
+
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			float: left;
+			
+			li {
+				margin-right: 15px;
+				float: left;
+				font-size: 15px;
+				font-weight: 400;
+				color: $color-text;
+
+				&:before {
+					margin-right: 2px;
+					font-size: 16px;
+					float: left;
+					margin-top: 2px;
+				}
+			}
+		}
+
+		.price {
+			float: right;
+		}
+
+	}
+/* */
+
+/* Slider styles */
+	#house-carousel{
+		position: relative;
+		margin-bottom: 27px;
+		
+		.carousel-indicators {
+			left: 0;
+			right: 0;
+			margin: 0;
+			width: 100%;
+			padding: 2px;
+			bottom: 0;
+			background: rgba(0,0,0,.4);
+			border-top: 1px solid;
+			text-align: justify;
+			overflow-y: auto;
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: nowrap;
+
+			li {
+				width: 13%;
+				min-width: 13%;
+				margin: .6%;
+				height: 70px;
+				border: none;
+				border-radius: 0;
+				display: inline-block;
+				background-size: cover;
+				background-position: center center;
+
+				&.active{
+					outline: 2px solid;
+					outline-offset: -2px;
+				}
+			}
+		}
+	}
+/* */
+
+/* House details styles */
+	.house-details{
+
+		.house-details-head{
+			margin-bottom: 7px;
+
+			.house-details-title{
+				float: left;
+				margin: 0;
+				text-transform: uppercase;
+			}
+
+			.ref{
+				float: right;
+			}
+		}
+
+		article{
+			padding: 15px;
+			padding-top: 20px;
+
+			header{
+				& > address{
+					float: left;
+					width: 100%;
+					margin-bottom: 7px;
+					text-transform: uppercase;
+					font-size: .9em;
+				}
+
+				& > h1 {
+					width: 100%;
+					margin: 15px 0;
+					color: $color-base-dark;
+				}
+			}
+
+			.house-listing-title{
+				//border-bottom: 1px solid rgba(200,200,200,.5);
+				//padding-bottom: 10px;
+				margin-top: 30px;
+				text-transform: uppercase;
+			}
+
+			.house-listing-summary{
+				font-size: 12px;
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				justify-content: flex-start;
+				flex-wrap: wrap;
+
+				li{
+					width: 25%;
+					padding-right: 10px;
+					border-top: 1px solid rgba(200,200,200,.5);
+
+					dl,
+					dt,
+					dd{
+						padding: 0;
+						margin: 0;
+					}
+
+					dt{
+						margin-top: 10px;
+						font-weight: 400;
+					}
+
+					dd{
+						font-weight: 700;
+						margin-bottom: 10px;
+					}
+				}
+			}
+
+		}
+	}
+/* */
+
+/* Sender box details styles */
+	#senderDetails{
+		padding: 15px;
+		font-size: 12px;
+
+		& > div{
+			display: table-row;
+		}
+
+		.avatar{
+			display: table-cell;
+			vertical-align: top;
+			width: 70px;
+		}
+
+		.details{
+			display: table-cell;
+			vertical-align: top;
+			padding-left: 10px;
+
+			.name {
+				color: $color-base-dark;
+				font-size: 14px;
+				margin: 0;
+				margin-bottom: 7px
+			}
+
+			.more-details{
+
+				span{
+					display: block;
+				}
+			}
+
+			.logo,
+			.logo img{
+				max-width: 100%;
+			}
+		}
+
+	}
+/* */
+
+/* Contact box styles */
+	#contact{
+		background: mix( lighten($color-info, 7%) , $color-base-dark, 85);
+		color: #fff;
+		padding: 7px;
+
+		.panel-group{
+			margin-bottom: 0;
+
+			.panel{
+				background: transparent;
+				border: none;
+				border-radius: 0;
+				box-shadow: none;
+				margin: 0;
+
+				.panel-heading{
+					color: #fff;
+					background: transparent;
+					padding: 0;
+					text-transform: uppercase;
+
+					.panel-title{
+
+						a{
+							font-weight: 400;
+							font-size: 15px;
+							padding: 20px;
+							display: block;
+							border-bottom: 1px solid rgba(200,200,200,.5);
+							transition: background-color .3s ease-in-out 0s;
+
+							&:hover{
+								background-color: rgba(0,0,0,.1);
+							}
+							&:before {
+								font-size: 18px;
+								float: left;
+								margin: 0 25px 0 5px;
+							}
+						}
+					}
+				}
+
+				.panel-body{
+					border-top: none;
+					background-color: #ffffff;
+					color: $color-text;
+
+					&:not(.form){
+						text-align: center;
+						color: $color-info;
+					}
+
+					&.form{
+						padding: 7px;
+
+						label{
+							font-size: 12px;
+						}
+
+						.note{
+							line-height: 1.5;
+							display: block;
+						}
+
+						.form-control{
+							font-size: 12px;
+							color: $color-default;
+							border-radius: 0;
+							margin-bottom: 15px;
+							padding: 2px 12px;
+							line-height: 1.82857143;
+
+							&:focus{
+								box-shadow: none;
+								border-color: $color-info;
+							}
+						}
+
+						.input-group{
+							.form-control{
+								margin-bottom: 0;
+							}
+
+							.input-group-addon{
+								border-radius: 0;
+								background-color: lighten($color-default, 23%);
+								font-size: 12px;
+								padding: 2px 12px;
+								line-height: 1.82857143;
+							}
+						}
+						
+
+						.btn.btn-primary{
+							font-size: 12px;
+							background: $color-base-dark;
+							border-color: $color-base-dark;
+							border-radius: 0;
+							box-shadow: none;
+							text-transform: uppercase;
+						}
+					}
+				}
+
+				&:last-child .panel-heading .panel-title a{
+					border-bottom: none;
+				}
+			}
+		}
+	}
+/* */
+
+/* Actions box styles */
+	#actions {
+		padding: 7px;
+
+			.panel-title {
+				text-transform: uppercase;
+
+			a {
+				font-weight: 400;
+				font-size: 15px;
+				padding: 20px;
+				display: block;
+				border-bottom: 1px solid rgba(200,200,200,.5);
+				transition: background-color .3s ease-in-out 0s;
+
+			&:hover {
+				background-color: rgba(0,0,0,.1);
+			}
+
+			&:before {
+				font-size: 18px;
+				float: left;
+				margin: 0 25px 0 5px;
+			}
+
+
+			}
+
+			&:last-child a{
+				border-bottom: none;
+			}
+		}
+	}
+/* */
+
+/* Ad box styles */
+	#ad{
+
+		figure,
+		img{
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+/* */
+
+/* Live market box styles */
+	#liveMarket{
+		h6{
+
+			&:before{
+				float: left;
+				margin-right: 5px;
+				font-size: 15px;
+			}
+		}
+
+		dl {
+			padding: 15px;
+			margin-bottom: 0;
+
+			dt{
+				text-transform: uppercase;
+				font-size: 13px;
+				font-weight: 400;
+				display: block;
+				margin-bottom: 3px;
+			}
+
+			dd{
+				padding-bottom: 7px;
+				margin-bottom: 15px;
+				font-size: 15px;
+				border-bottom: 1px solid rgba(200,200,200,.5);
+				display: block;
+			}
+		}
+
+		.btn.btn-primary{
+			margin: 0 15px 15px;
+			border-radius: 0;
+			box-shadow: none;
+			font-size: 12px;
+			text-transform: uppercase;
+		}
+	}
+/* */
+
+/* Related properties styles */
+	#related{
+		position: relative;
+
+		h3{
+			text-align: center;
+			text-transform: uppercase;
+
+			&:before{
+				position: relative;
+				top: 2px;
+				margin-right: 5px;
+			}
+		}
+		ul{
+			list-style: none;
+			padding: 0;
+			margin: 0;
+
+			li{
+				width: 176px;
+				display: block;
+				float: left;
+				margin-right: 10px;
+
+				a{
+					display: block;
+					color: $color-text;
+					padding-bottom: 15px;
+
+					h4{
+						margin: 10px;
+						padding: 0 0 2px;
+						font-size: 14px;
+						font-weight: 700;
+						border-bottom: 1px solid rgba(200,200,200,.5);
+					}
+
+					.price{
+						font-size: 14px;
+						text-align: center;
+
+						&:before{
+							float: none;
+						}
+					}
+
+					figure{
+						max-width: 100%;
+						height: 120px;
+						background-size: cover;
+						background-position: center center;
+					}
+				}
+
+				&:last-child{
+					margin-right: 0;
+				}
+			}
+		}
+	}
+/* */
+
+/* Rent page styles */
+	.rent{
+
+		.price{
+
+			.amount{
+				color: $color-primary;
+			}
+
+			.unit{
+				
+			}
+		}
+
+		.ref{
+
+			.amount{
+				color: $color-primary;
+			}
+		}
+
+		.market-live-label{
+
+		}
+
+		#related ul li a .price{
+			color: $color-primary;
+		}
+
+		#liveMarket dl dt{
+			color: $color-primary;
+		}
+
+		#contact {
+			background: mix( lighten($color-primary, 7%) , $color-base-dark, 85);
+			.panel-group .panel .panel-body{
+				&:not(.form){
+					color: $color-primary;
+				}
+
+				&.form .form-control:focus{
+					border-color: $color-primary;
+				}
+			}
+		}
+	}
+
+	.side-box {
+		margin-bottom: 15px;
+	}
+/* */
+
+/* Responsive styles */
+	@media (min-width:768px) and (max-width:991px) {
+		#related ul{
+			margin-right: -10px;
+			li{
+				a figure{
+					height: 175px;
+				}
+				width: 295px;
+				margin-bottom: 15px;
+				&:last-child{
+					display: none;
+				}
+			}
+		}
+	}
+	@media (max-width: 767px){
+		#house-carousel	.carousel-indicators {
+			position: relative;
+
+			li {
+				width: 80px;
+				min-width: 80px;
+			}
+		}
+
+		.house-overview {
+			text-align: center;
+			ul{
+				width: 100%;
+				margin-bottom: 15px;
+				li{
+					float: none;
+					display: inline-block;
+				}
+			}
+			.price{
+				float: none;
+				&:before{
+					float: none;
+					position: relative;
+					top: 2px;
+				}
+				width: 100%;
+				margin-top: 20px;
+				display: block;
+			}
+		}
+
+		#related ul li{
+			a figure{
+				height: 350px;
+			}
+			width: 100%;
+			float: none;
+			margin-bottom: 15px;
+		}
+
+		.house-details article .house-listing-summary li{
+			width: 50%;
+		}
+	}
+
+	@media (max-width: 480px){
+			#related ul li{
+			a figure{
+				height: 250px;
+			}
+		}
+	}
+/* */

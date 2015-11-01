@@ -1,0 +1,106 @@
+@import 'variables';
+
+
+.shadow-box{
+	box-shadow: 0 0 6px -1px $color-default;
+	background-color: #ffffff;
+}
+
+.price{
+
+	&:before{
+		display: inline-block;
+		float: left;
+		margin-top: .2em;
+		margin-right: 3px;
+	}
+
+	.amount{
+		margin-right: 2px;
+		font-weight: 700;
+	}
+
+	.unit{
+		font-size: .9em;
+	}
+}
+
+.ref{
+	text-transform: uppercase;
+
+	.amount{
+		margin-left: 5px;
+	}
+}
+
+.market-live-label{
+
+}
+
+
+/* Main header styles */
+	#mainHeader nav.navbar {
+		background: $color-base-dark;
+		box-shadow: none;
+		border: none;
+
+		.navbar-brand {
+			padding-bottom: 4px;
+		    padding-top: 4px;
+		    margin: 12px 0;
+		    height: 30px;
+		    background: darken($color-default,20%);
+		
+			& > img {
+				display: inline-block;
+				background-color: #ffffff;
+				margin-top: -4px;
+				margin-left: -10px;
+				margin-right: 5px;
+			}
+		}
+
+		.navbar-nav {
+
+			li > a {
+			    font-size: 13px;
+			    font-weight: 400;
+			    text-transform: uppercase;
+			}
+
+			&.navbar-right{
+				li {
+
+					& > a {
+						border-right: 1px solid lighten($color-base-dark,5%);
+						border-bottom: 5px solid;
+						padding-bottom: 13px;
+						padding-top: 14px;
+		    			border-bottom-color: $color-default;
+					}
+
+					&:last-child > a {
+						border-right: none;
+					}
+
+					&.active > a {
+						background-image: none;
+						box-shadow: none;
+		    			border-bottom-color: $color-primary;
+					}
+
+					&.success > a {
+		    			border-bottom-color: $color-success;
+					}
+					
+					&.info > a {
+		    			border-bottom-color: $color-info;
+					}
+				}
+				
+			}
+
+		}
+
+	}
+/* */

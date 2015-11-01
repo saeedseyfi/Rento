@@ -1,0 +1,30 @@
+{
+  "name": "fe-test",
+  "version": "1.0.0",
+  "description": "Saeed Seyfi's front-end test to work as a front-end developer at Sarava <3",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Saeed Seyfi",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-filter": "^3.0.1",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.0",
+    "gulp-uglify": "^1.4.2",
+    "gulp-util": "^3.0.7",
+    "imagemin-pngquant": "^4.2.0",
+    "open": "0.0.5",
+    "paperboy": "0.0.5",
+    "rimraf": "^2.4.3",
+    "run-sequence": "^1.1.4"
+  }
+}
